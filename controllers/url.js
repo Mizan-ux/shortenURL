@@ -8,6 +8,7 @@ async function handleNewGenerageShortURL(req, res) {
         shortId: shortID,
         redirectURL: data.url,
         visitHistory: [],
+        createdBy: req.user._id,
     })
     return res.render('home', { id: shortID });
     // return res.json({ id: shortID });
